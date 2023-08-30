@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="2.4. 숫자" href="numbers.html" />
-    <link rel="prev" title="2. 표현식과 자료의 형식" href="start.html" />
+    <link rel="prev" title="2. 파이썬의 기초" href="start.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,6 +168,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. 표현식과 변수</a></li>
 <li class="toctree-l2"><a class="reference internal" href="numbers.html">2.4. 숫자와 형식</a></li>
 <li class="toctree-l2"><a class="reference internal" href="string.html">2.5. 문자열</a></li>
+<li class="toctree-l2"><a class="reference internal" href="list.html">2.6. 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="array.html">2.7. 배열</a></li>
 </ul>
 </li>
 </ul>
@@ -352,7 +354,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.3.3. 비교연산자와 논리연산자</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.3.4. 변수</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.3.5. 라이브러리와 함수</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.3.6. 리스트</a></li>
 </ul>
             </nav>
         </div>
@@ -940,140 +941,6 @@ ame
 </div>
 <p>참고로 라이브러리는 모듈(module)이라고도 불리며 기본적으로 같은 의미이다.  <code class="docutils literal notranslate"><span class="pre">math</span></code> 라이브러리에서 정의된 다양한 수학함수들의 사용법은 <a class="reference external" href="https://docs.python.org/3/library/math.html">파이썬 모듈 매뉴얼</a>에 있다.</p>
 </section>
-<section id="id7">
-<h2><span class="section-number">2.3.6. </span>리스트<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
-<p>파이썬에서 리스트(<code class="docutils literal notranslate"><span class="pre">list</span></code>)는 데이터를 모아놓은 <strong>순서가 있는</strong> 복합체 또는 집합이다.</p>
-<p>리스트를 정의하는 방법은 중괄호 <code class="docutils literal notranslate"><span class="pre">[]</span></code> 안에 데이터 또는 변수를 쉼표 <code class="docutils literal notranslate"><span class="pre">,</span></code> 로 분리하여 놓는다. 리스트 안에 있는 원소(element)들은 아래에서 정의한 것처럼 정수, 실수, 문자열 등 그 성질이 같을 필요는 없다.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;chair&#39;</span><span class="p">]</span>
-<span class="n">list_1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 0.5, &#39;chair&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<p>심지어 리스트는 여러 개의 서로 다른 리스트를 원소로 가질 수 있다.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_2</span> <span class="o">=</span> <span class="p">[</span> <span class="n">list_1</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>
-<span class="n">list_2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2, 0.5, &#39;chair&#39;], &#39;A&#39;, [1, 2, 3]]
-</pre></div>
-</div>
-</div>
-</div>
-<p>리스트 안의 각 원소는 순서에 따라서 지정된 값이 있으며 이를 <strong>인덱스(index)</strong> 라고 한다.</p>
-<p>인덱스를 이용하여 리스트의 원소를 꺼내 볼 수 있다. 이를 슬라이싱(slicing)이라고 한다. 인덱스를 이용한 슬라이싱은 리스트의 이름 뒤에 중괄호 <code class="docutils literal notranslate"><span class="pre">[]</span></code> 안에 인덱스를 넣어서 수행한다.</p>
-<p><strong>!!!! 파이썬의 인덱스는 1이 아닌 0 부터 시작하므로 이를 언제나 유념해야 한다 !!!</strong>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
-</pre></div>
-</div>
-</div>
-</div>
-<p>위의 결과에서 보았듯이 5개의 원소를 가진 리스트의 인덱스는 0 으로 시작해서 4 로 끝난다. 민약 리스트의 인텍스 범위를 벗어나서 슬라이싱을 하면 오류가 발생한다.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_3</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">47</span><span class="o">-</span><span class="n">f03c86e5c67e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">list_3</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;list_3&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<p>마지막으로 변수나 숫자가 리스트에 포함되는지 알려주는 포함연산자 <code class="docutils literal notranslate"><span class="pre">in</span></code> 이 유용하다.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">a</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1113,7 +980,7 @@ ame
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>표현식과 자료의 형식</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>파이썬의 기초</p>
       </div>
     </a>
     <a class="right-next"
@@ -1148,7 +1015,6 @@ ame
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.3.3. 비교연산자와 논리연산자</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.3.4. 변수</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.3.5. 라이브러리와 함수</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.3.6. 리스트</a></li>
 </ul>
   </nav></div>
 

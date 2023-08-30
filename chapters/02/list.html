@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2. 파이썬의 기초 &#8212; 빅데이터입문</title>
+    <title>2.6. 리스트 &#8212; 빅데이터입문</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/02/start';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/02/list';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.3. 표현식과 변수" href="basic-expression.html" />
-    <link rel="prev" title="1.2. 파이썬 기초" href="intro-python.html" />
+    <link rel="next" title="2.7. 배열" href="array.html" />
+    <link rel="prev" title="2.5. 문자열" href="string.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,11 +162,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="intro-python.html">1.2. 파이썬 언어</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. 파이썬의 기초</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="start.html">2. 파이썬의 기초</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="basic-expression.html">2.3. 표현식과 변수</a></li>
 <li class="toctree-l2"><a class="reference internal" href="numbers.html">2.4. 숫자와 형식</a></li>
 <li class="toctree-l2"><a class="reference internal" href="string.html">2.5. 문자열</a></li>
-<li class="toctree-l2"><a class="reference internal" href="list.html">2.6. 리스트</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.6. 리스트</a></li>
 <li class="toctree-l2"><a class="reference internal" href="array.html">2.7. 배열</a></li>
 </ul>
 </li>
@@ -216,6 +216,37 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/UOS-Bigdata/bigdata_intro/blob/master/chapters/02/list.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -224,7 +255,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/chapters/02/start.md" target="_blank"
+      <li><a href="../../_sources/chapters/02/list.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -234,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -306,7 +337,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>파이썬의 기초</h1>
+    <h1>리스트</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -316,8 +347,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1. 표현식과 변수</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2. 자료의 형식</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.6.1. 리스트의 정의</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.6.2. 인덱스</a></li>
 </ul>
             </nav>
         </div>
@@ -330,22 +361,144 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1><span class="section-number">2. </span>파이썬의 기초<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2.6. </span>리스트<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <section id="id2">
-<h2><span class="section-number">2.1. </span>표현식과 변수<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>파이썬 언어도 인간의 언어와 같이 정해진 문법이 있는데 표현식은 주어진 자료들를 어떻게 처리할 것인지 컴퓨터에게 전달하는 문장입니다.</p>
-<p>이 장에서는 표현식에서 사용되는 변수와 기본적인 연산자에 대하여 학습합니다.</p>
+<h2><span class="section-number">2.6.1. </span>리스트의 정의<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>파이썬에서 리스트(<code class="docutils literal notranslate"><span class="pre">list</span></code>)는 데이터를 모아놓은 <strong>순서가 있는</strong> 복합체 또는 집합이다.</p>
+<p>리스트를 정의하는 방법은 중괄호 <code class="docutils literal notranslate"><span class="pre">[]</span></code> 안에 데이터 또는 변수를 쉼표 <code class="docutils literal notranslate"><span class="pre">,</span></code> 로 분리하여 놓는다. 리스트 안에 있는 원소(element)들은 아래에서 정의한 것처럼 정수, 실수, 문자열 등 그 성질이 같을 필요는 없다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+<span class="n">list_1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 0.5, &#39;chair&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>심지어 리스트는 여러 개의 서로 다른 리스트를 원소로 가질 수 있다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_2</span> <span class="o">=</span> <span class="p">[</span> <span class="n">list_1</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">list_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2, 0.5, &#39;chair&#39;], &#39;A&#39;, [1, 2, 3]]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="id3">
-<h2><span class="section-number">2.2. </span>자료의 형식<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p>우리가 컴퓨터에서 다루는 자료는 주로 숫자와 문자입니다.</p>
-<p>숫자는 정수(integer)와 실수(real number)로 구분할 수 있습니다. 물론 정수도 실수의 범위에 포함되지만 컴퓨터에서는 정수와 실수를 저장하는 방법이 다릅니다. 프로그램 언어에서는 소숫점을 이용하여 표현하는 실수를 특별하게 부동소숫점(floating point number)라고 부릅니다.</p>
-<p>문자열은 말 그대로 문자형식으로 표현되는 자료입니다. 숫자를 포함한 모든 글자, 특수 문자를 포함하고 있으며 특별한 가능을 가진 특수 문자열도 문자 형식의 자료입니다.</p>
-<p>이제 파이썬 언어에서 숫자와 문자를 데이터로 사용할 때 저장하는 형식(type)과 그 특징을 알아보도록 하겠습니다.</p>
-<p>또한 계산에 사용하는 배열(Array)형식에 대하여 간단하게 알아볼 것입니다.</p>
-</section>
-<div class="toctree-wrapper compound">
+<h2><span class="section-number">2.6.2. </span>인덱스<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>리스트 안의 각 원소는 순서에 따라서 지정된 값이 있으며 이를 <strong>인덱스(index)</strong> 라고 한다.</p>
+<p>인덱스를 이용하여 리스트의 원소를 꺼내 볼 수 있다. 이를 슬라이싱(slicing)이라고 한다. 인덱스를 이용한 슬라이싱은 리스트의 이름 뒤에 중괄호 <code class="docutils literal notranslate"><span class="pre">[]</span></code> 안에 인덱스를 넣어서 수행한다.</p>
+<p><strong>!!!! 파이썬의 인덱스는 1이 아닌 0 부터 시작하므로 이를 언제나 유념해야 한다 !!!</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+</pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
+</pre></div>
+</div>
+</div>
+</div>
+<p>위의 결과에서 보았듯이 5개의 원소를 가진 리스트의 인덱스는 0 으로 시작해서 4 로 끝난다. 민약 리스트의 인텍스 범위를 벗어나서 슬라이싱을 하면 오류가 발생한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_3</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">ylee19067</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">CloudStorage</span><span class="o">/</span><span class="n">Dropbox</span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">teaching</span><span class="o">/</span><span class="n">bigdata_intro</span><span class="o">/</span><span class="n">book</span><span class="o">/</span><span class="n">chapters</span><span class="o">/</span><span class="mi">02</span><span class="o">/</span><span class="nb">list</span><span class="o">.</span><span class="n">ipynb</span> <span class="n">Cell</span> <span class="mi">16</span> <span class="ow">in</span> <span class="mi">1</span>
+<span class="o">----&gt;</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/Users/ylee19067/Library/CloudStorage/Dropbox/project/teaching/bigdata_intro/book/chapters/02/list.ipynb#Y142sZmlsZQ%3D%3D?line=0&#39;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">list_3</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;list_3&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>마지막으로 변수나 숫자가 리스트에 포함되는지 알려주는 포함연산자 <code class="docutils literal notranslate"><span class="pre">in</span></code> 이 유용하다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">a</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -380,20 +533,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro-python.html"
+       href="string.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.2. </span>파이썬 기초</p>
+        <p class="prev-next-title"><span class="section-number">2.5. </span>문자열</p>
       </div>
     </a>
     <a class="right-next"
-       href="basic-expression.html"
+       href="array.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3. </span>표현식과 변수</p>
+        <p class="prev-next-title"><span class="section-number">2.7. </span>배열</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -415,8 +568,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1. 표현식과 변수</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2. 자료의 형식</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.6.1. 리스트의 정의</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.6.2. 인덱스</a></li>
 </ul>
   </nav></div>
 
